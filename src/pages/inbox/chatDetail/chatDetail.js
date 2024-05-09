@@ -13,6 +13,8 @@ export default function ChatDetail({
   addNewMessage,
 }) {
   const [isAksi, setAksi] = useState(false);
+  const details = chatMessages;
+  const newMess = newMessages;
 
   const hanleAksi = () => {
     setAksi(!isAksi);
@@ -36,7 +38,7 @@ export default function ChatDetail({
           <p className="m-auto">{formatDate(new Date())}</p>
           <section></section>
         </div>
-        {chatMessages.map((msg, index) => (
+        {details.map((msg, index) => (
           <div key={index}>
             {msg.isReply ? (
               <div>
@@ -109,7 +111,7 @@ export default function ChatDetail({
               <p className="m-auto text-danger">New Message</p>
               <section></section>
             </div>
-            {newMessages.map((msg, index) => (
+            {newMess.map((msg, index) => (
               <div key={index}>
                 <p
                   style={{
