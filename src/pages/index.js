@@ -132,7 +132,6 @@ export default function Home() {
   const handleDetail = (user) => {
     setSelectedChatIndex(user);
     setShowDetailChat(true);
-    console.log(`Clicked on ${user.firstName} ${user.lastName}`);
     setUsers(user);
     setAlready(false);
   };
