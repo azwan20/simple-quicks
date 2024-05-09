@@ -1,0 +1,229 @@
+:root {
+  --primary-color1: #2F80ED;
+  --primary-color2: #4F4F4F;
+  --primary-color3: #828282;
+  --primary-color4: #E0E0E0;
+  --chats-color1: #FCEED3;
+  --chats-color2: #EEDCFF;
+  --chats-color3: #D2F2EA;
+
+
+
+}
+
+.home {
+  width: 100%;
+  height: 100vh;
+  background-color: #333333;
+  margin: 0;
+  padding: 0;
+}
+
+.home .sidebar {
+  width: 20%;
+}
+
+.home nav {
+  width: 80%;
+  height: 50px;
+  background-color: var(--primary-color3);
+  padding-left: 15px;
+}
+
+.home .ikon {
+  position: absolute;
+  /* bottom: 0; */
+  top: 88%;
+  right: 2%;
+  display: flex;
+}
+
+.home .ikon span {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  color: var(--primary-color4);
+}
+
+.home .component .search{
+  position: absolute;
+  top: 20%;
+  right: 2%;
+  width: 40%;
+  background-color: #fff;
+  height: 65%;
+  border-radius: 5px;
+}
+
+.home .component .search nav{
+  width: 90%;
+  height: 20px;
+  border: 0.5px solid gray;
+  border-radius: 3px;
+  background-color: #fff;
+  margin: 24px auto 0;
+  font-size: 10px;
+  padding: 0 30px;
+  color: gray;
+}
+
+.home .chats{
+  width: 90%;
+  margin: 22px auto;
+}
+
+.home .chats p{
+  margin: 0;
+}
+
+.home .details{
+  padding: 22px 15px 22px 20px;
+}
+
+.home .details p{
+  margin: 0;
+}
+
+.home .chat{
+  background-color: var(--chats-color2);
+  font-size: 12px;
+  width: 60%;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.home .chatRepl{
+  background-color: var(--chats-color1);
+  font-size: 12px;
+  width: 60%;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.home .supporte{
+  background-color: #f8f8f8;
+  font-size: 12px;
+  width: 70%;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.home .chatNew{
+  background-color: var(--chats-color3);
+  font-size: 12px;
+  width: 60%;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.home .garis{
+  margin: 22px 0 0;
+}
+
+.home .garis section{
+border: 0.2px solid black;
+  width: 32%;
+  height: 0.2px;
+  margin: auto 0;
+}
+
+.home .aksi{
+  height: fit-content;
+  width: 100px;
+  border: 0.2px solid black;
+  border-radius: 5px;
+  position: absolute;
+  z-index: 99;
+  background-color: #fff;
+}
+
+.home .aksi p{
+  padding: 5px 10px;
+  font-weight: 200;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.home .searching{
+  width: 95%;
+  background-color: transparent;
+  margin: auto;
+  position: absolute;
+  top: 90%;
+  bottom: 0;
+  left: 2%;
+}
+
+.inbox-content {
+  display: none; /* Awalnya disembunyikan */
+}
+
+/* Saat showInbox bernilai true, tampilkan konten inbox */
+.inbox-content.show {
+  display: block;
+  position: relative;
+  left: 14px;
+}
+
+/* Atur tata letak konten inbox */
+.inbox-content {
+  position: absolute; /* Atur posisi absolut */;
+}
+
+.inbox-tag {
+  font-size: 16px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.hide {
+  display: none;
+}
+
+.loading-spinner-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 80%;
+}
+
+.loading-spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-left-color: #333;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.home .contentTask .up{
+  font-size: 14px;
+  margin: auto;
+}
+
+.home .contentTask .up span{
+  display: flex;
+  align-items: center;
+}
+
+.home .contentTask .up p{
+  margin-bottom: 0;
+}
+
+.up span:nth-child(2) p{
+  margin-left: 10px;
+}
+
+.home .task hr{
+  margin: 1rem;
+}
+
+
