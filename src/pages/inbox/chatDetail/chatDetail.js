@@ -28,7 +28,6 @@ export default function ChatDetail({
     return date.toLocaleDateString("en-US", options);
   };
 
-  console.log("ini user", users);
   return (
     <>
       <div className="chats" style={{ maxHeight: "60%", overflowY: "auto" }}>
