@@ -27,10 +27,9 @@ export default function Home() {
   const [isLoadings, setIsLoadings] = useState(true);
   const [isTyping, setIsTyping] = useState(false);
   const [newMessages, setNewMessages] = useState([]);
-
+  const [tanggal, setTanggal] = useState(false);
   const [users, setUsers] = useState([]);
   const [alreay, setAlready] = useState(true);
-
   const [urgentToDo, setUrgentToDo] = useState(false);
   const replyMessages = [
     "Hello Obaidullah, I will be your case advisor for case #029290. I have assigned some homework for you to fill. Please keep up with the due dates. Should you have any questions, you can message me anytime. Thanks.",
@@ -65,6 +64,7 @@ export default function Home() {
       };
       setChatMessages((prevMessages) => [...prevMessages, userMessage]);
       setMessage("");
+      setTanggal(true);
     }
   };
 
@@ -162,15 +162,15 @@ export default function Home() {
   }, []);
 
   // Fungsi untuk menambahkan pesan baru
-  const addNewMessage = (msg) => {
-    setChatMessages([...chatMessages, msg]);
-    setIsTyping(false);
+  // const addNewMessage = (msg) => {
+  //   setChatMessages([...chatMessages, msg]);
+  //   setIsTyping(false);
 
-    // Setelah 5 detik, atur kembali isTyping menjadi false
-    setTimeout(() => {
-      setIsTyping(true);
-    }, 5000); // Mengatur waktu menjadi 5000 untuk 5 detik
-  };
+  //   // Setelah 5 detik, atur kembali isTyping menjadi false
+  //   setTimeout(() => {
+  //     setIsTyping(true);
+  //   }, 5000); // Mengatur waktu menjadi 5000 untuk 5 detik
+  // };
 
   return (
     <>
@@ -583,11 +583,12 @@ export default function Home() {
                   newMessages={newMessages}
                   isTyping={isTyping}
                   handleSendMessage={handleSendMessage}
+                  tanggal={tanggal}
                   handleMessageChange={handleMessageChange}
                   message={message}
                   handleReceiveMessage={handleReceiveMessage}
                   users={users}
-                  addNewMessage={addNewMessage}
+                  // addNewMessage={addNewMessage}
                 />
               ) : support ? (
                 <Support />
