@@ -41,7 +41,7 @@ export default function Home() {
   ];
 
   const newMessage = [
-    "Morning. I’ll try to do them. Thanks",
+    "Morning. Ill try to do them. Thanks",
     "No worries. It will be complaecated ASAP. Ive asked him yesterday.",
     "thank you",
   ];
