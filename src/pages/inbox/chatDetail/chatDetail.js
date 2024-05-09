@@ -4,17 +4,23 @@ import FooterDetail from "./footerDetail";
 export default function ChatDetail({
   chatMessages,
   newMessages,
-  handleSendMessage,
-  handleMessageChange,
-  message,
-  handleReceiveMessage,
-  users,
+  // handleSendMessage,
+  // handleMessageChange,
+  // message,
+  // handleReceiveMessage,
+  // users,
   isTyping,
-  addNewMessage,
+  // addNewMessage,
 }) {
   const [isAksi, setAksi] = useState(false);
   const details = chatMessages;
   const newMess = newMessages;
+  // const handleSned = handleSendMessage;
+  // const handleChange = handleMessageChange;
+  // const mess = message;
+  // const handleReceive = handleReceiveMessage;
+  const isType = isTyping;
+  // const addNew = addNewMessage;
 
   const hanleAksi = () => {
     setAksi(!isAksi);
@@ -104,7 +110,7 @@ export default function ChatDetail({
             )}
           </div>
         ))}
-        {isTyping && (
+        {isType && (
           <span>
             <div className="d-flex garis justify-content-between">
               <section></section>
@@ -137,13 +143,7 @@ export default function ChatDetail({
           </span>
         )}
       </div>
-      <FooterDetail
-        handleSendMessage={handleSendMessage}
-        handleMessageChange={handleMessageChange}
-        message={message}
-        handleReceiveMessage={handleReceiveMessage}
-        addNewMessage={addNewMessage}
-      />
+      
     </>
   );
 }
