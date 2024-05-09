@@ -60,8 +60,6 @@ export default function Home() {
     "Hello Obaidullah, I will be your case advisor for case #029290. I have assigned some homework for you to fill. Please keep up with the due dates. Should you have any questions, you can message me anytime. Thanks.",
     "Sure thing, Claren",
     "Thanks you",
-    "paniya",
-    "devani",
   ];
 
   const newMessage = [
