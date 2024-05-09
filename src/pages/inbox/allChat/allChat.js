@@ -4,7 +4,30 @@ import ChatDetail from "../chatDetail/chatDetail";
 import FooterDetail from "../chatDetail/footerDetail";
 import React, { useEffect, useState } from "react";
 
+// const fetchData = async () => {
+//   const appId = "66382172ad901e170999d8bc"; // Ganti dengan ID Aplikasi Anda
+//   const endpoint = "https://dummyapi.io/data/v1/user";
+//   const page = 0; // Nomor halaman dimulai dari 0
+//   const limit = 10; // Batas jumlah item
 
+//   try {
+//     const response = await fetch(`${endpoint}?page=${page}&limit=${limit}`, {
+//       headers: {
+//         "app-id": appId,
+//       },
+//     });
+
+//     if (!response.ok) {
+//       throw new Error("Failed to fetch data");
+//     }
+
+//     const data = await response.json();
+//     return data;
+//   } catch (error) {
+//     console.error("Error fetching data:", error);
+//     return null;
+//   }
+// };
 
 export default function AllChat({
   showDetailChat,
@@ -12,17 +35,18 @@ export default function AllChat({
   handleDetail,
   handleSupport,
   alreay,
+  userData,
 }) {
-  const [userData, setUserData] = useState(null);
+  // const [userData, setUserData] = useState(null);
 
-  useEffect(() => {
-    const fetchDataAsync = async () => {
-      const data = await fetchData();
-      setUserData(data);
-    };
+  // useEffect(() => {
+  //   const fetchDataAsync = async () => {
+  //     const data = await fetchData();
+  //     setUserData(data);
+  //   };
 
-    fetchDataAsync();
-  }, []);
+  //   fetchDataAsync();
+  // }, []);
   return (
     <>
       {!showDetailChat && (
@@ -155,28 +179,3 @@ export default function AllChat({
     </>
   );
 }
-
-const fetchData = async () => {
-  const appId = "66382172ad901e170999d8bc"; // Ganti dengan ID Aplikasi Anda
-  const endpoint = "https://dummyapi.io/data/v1/user";
-  const page = 0; // Nomor halaman dimulai dari 0
-  const limit = 10; // Batas jumlah item
-
-  try {
-    const response = await fetch(`${endpoint}?page=${page}&limit=${limit}`, {
-      headers: {
-        "app-id": appId,
-      },
-    });
-
-    if (!response.ok) {
-      throw new Error("Failed to fetch data");
-    }
-
-    const data = await response.json();
-    return data;
-  } catch (error) {
-    console.error("Error fetching data:", error);
-    return null;
-  }
-};
