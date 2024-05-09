@@ -10,6 +10,31 @@ import AllTask from "./task/allTask";
 import HeaderSupport from "./inbox/sopport/header";
 import Support from "./inbox/sopport";
 
+const fetchData = async () => {
+  const appId = "66382172ad901e170999d8bc"; // Ganti dengan ID Aplikasi Anda
+  const endpoint = "https://dummyapi.io/data/v1/user";
+  const page = 0; // Nomor halaman dimulai dari 0
+  const limit = 10; // Batas jumlah item
+
+  try {
+    const response = await fetch(`${endpoint}?page=${page}&limit=${limit}`, {
+      headers: {
+        "app-id": appId,
+      },
+    });
+
+    if (!response.ok) {
+      throw new Error("Failed to fetch data");
+    }
+
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error("Error fetching data:", error);
+    return null;
+  }
+};
+
 export default function Home() {
   const [showIcons, setShowIcons] = useState(false);
   const [showVisible, setShowVisible] = useState(true);
@@ -44,6 +69,17 @@ export default function Home() {
     "No worries. It will be complaecated ASAP. Ive asked him yesterday.",
     "thank you",
   ];
+
+  const [userData, setUserData] = useState(null);
+
+  useEffect(() => {
+    const fetchDataAsync = async () => {
+      const data = await fetchData();
+      setUserData(data);
+    };
+
+    fetchDataAsync();
+  }, []);
 
   const handleMessageChange = (e) => {
     setMessage(e.target.value);
@@ -599,6 +635,7 @@ export default function Home() {
                   handleDetail={handleDetail}
                   handleSupport={handleSupport}
                   alreay={alreay}
+                  userData={userData}
                 />
               )}
             </section>
