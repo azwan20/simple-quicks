@@ -47,7 +47,8 @@ export default function ChatDetail({
                     textAlign: "left",
                   }}
                 >
-                  {users.firstName}
+                  {/* {users.firstName} */}
+                  zani
                 </p>
                 <span className="d-flex justify-content-start">
                   <section className="chatRepl">
@@ -117,7 +118,8 @@ export default function ChatDetail({
                     textAlign: "left",
                   }}
                 >
-                  {users.lastName}
+                  {/* {users.lastName} */}
+                  mere
                 </p>
                 <span className="d-flex justify-content-start">
                   <section className="chatNew">
