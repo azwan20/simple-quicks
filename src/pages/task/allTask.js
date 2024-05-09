@@ -187,8 +187,6 @@ export default function AllTask({ newTask, urgentToDo, isLoadings }) {
   return (
     <>
       <div className="task" style={{ maxHeight: "90%", overflowY: "auto" }}>
-        {isLoading ? (
-          <span>
             {!urgentToDo
               ? contentTask.map((task, index) => (
                   <div className="contentTask" key={index}>
@@ -522,9 +520,7 @@ export default function AllTask({ newTask, urgentToDo, isLoadings }) {
                     <hr />
                   </div>
                 ))}
-          </span>
-        ) : (
-          <div
+          {/* <div
             className="d-flex align-items-center justify-content-center"
             style={{ height: "450px" }}
           >
@@ -532,8 +528,7 @@ export default function AllTask({ newTask, urgentToDo, isLoadings }) {
               <div className="loading-spinner"></div>
               <p>Loading Chats...</p>
             </div>
-          </div>
-        )}
+          </div> */}
         {newTask && (
           <div className="mb-5">
             <div>
