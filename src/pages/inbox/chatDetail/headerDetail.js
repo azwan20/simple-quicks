@@ -1,4 +1,5 @@
-export default function HeaderDetail({handleBackToChats, users}) {
+export default function HeaderDetail({ handleBackToChats, users }) {
+  console.log("nama", users);
   return (
     <>
       <span className="d-flex justify-content-between align-items-center details">
@@ -10,7 +11,7 @@ export default function HeaderDetail({handleBackToChats, users}) {
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
             onClick={handleBackToChats}
-            style={{cursor: 'pointer'}}
+            style={{ cursor: "pointer" }}
           >
             <path
               d="M25.9883 13.8304H10.6868L17.7152 6.80204L15.9298 5.02924L5.87134 15.0877L15.9298 25.1462L17.7026 23.3734L10.6868 16.345H25.9883V13.8304Z"
@@ -19,7 +20,8 @@ export default function HeaderDetail({handleBackToChats, users}) {
           </svg>
           <span className="ms-2">
             <p style={{ color: "#2F80ED", fontSize: "16px" }}>
-              1-589 - {users.firstName || ""}, {users.lastName || ""} [Affirmative Filling with ZHN]
+              1-589 - {users?.firstName || ""}, {users?.lastName || ""}{" "}
+              [Affirmative Filling with ZHN]
             </p>
             <p style={{ color: "gray", fontSize: "14px" }}>3 Participants</p>
           </span>
@@ -30,7 +32,7 @@ export default function HeaderDetail({handleBackToChats, users}) {
           viewBox="0 0 21 21"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          style={{cursor: 'pointer'}}
+          style={{ cursor: "pointer" }}
           onClick={handleBackToChats}
         >
           <path

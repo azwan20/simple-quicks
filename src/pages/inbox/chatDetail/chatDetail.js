@@ -41,7 +41,7 @@ export default function ChatDetail({
             <section></section>
           </div>
         )}
-        {chatMessages.map((msg, index) => (
+        {chatMessages && chatMessages.length > 0 && chatMessages.map((msg, index) => (
           <div key={index}>
             {msg.isReply ? (
               <div>
@@ -106,7 +106,7 @@ export default function ChatDetail({
             )}
           </div>
         ))}
-        {isTyping && (
+        {isTyping && newMessages && newMessages.length > 0 && (
           <span>
             <div className="d-flex garis justify-content-between">
               <section></section>
