@@ -19,8 +19,7 @@ export default function HeaderDetail({handleBackToChats, users}) {
           </svg>
           <span className="ms-2">
             <p style={{ color: "#2F80ED", fontSize: "16px" }}>
-              {/* 1-589 - {users.firstName}, {users.lastName} [Affirmative Filling with ZHN] */}
-              1-589 - maga, zani [Affirmative Filling with ZHN]
+              1-589 - {users.firstName}, {users.lastName} [Affirmative Filling with ZHN]
             </p>
             <p style={{ color: "gray", fontSize: "14px" }}>3 Participants</p>
           </span>

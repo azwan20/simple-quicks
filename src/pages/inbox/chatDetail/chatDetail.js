@@ -11,6 +11,7 @@ export default function ChatDetail({
   users,
   isTyping,
   addNewMessage,
+  tanggal,
 }) {
   const [isAksi, setAksi] = useState(false);
 
@@ -31,12 +32,14 @@ export default function ChatDetail({
   return (
     <>
       <div className="chats" style={{ maxHeight: "60%", overflowY: "auto" }}>
-        <div className="d-flex garis justify-content-between">
-          <section></section>
-          <p className="m-auto">{formatDate(new Date())}</p>
-          <section></section>
-        </div>
-        {/* {chatMessages.map((msg, index) => (
+        {tanggal && (
+          <div className="d-flex garis justify-content-between">
+            <section></section>
+            <p className="m-auto">{formatDate(new Date())}</p>
+            <section></section>
+          </div>
+        )}
+        {chatMessages.map((msg, index) => (
           <div key={index}>
             {msg.isReply ? (
               <div>
@@ -131,8 +134,7 @@ export default function ChatDetail({
               </div>
             ))}
           </span>
-        )} */}
-        Yosud
+        )}
       </div>
       <FooterDetail
         handleSendMessage={handleSendMessage}
