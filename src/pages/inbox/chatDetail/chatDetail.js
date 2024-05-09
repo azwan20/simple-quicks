@@ -19,6 +19,8 @@ export default function ChatDetail({
     setAksi(!isAksi);
   };
 
+  console.log("is", newMessages);
+
   const formatDate = (date) => {
     const options = {
       weekday: "long",
